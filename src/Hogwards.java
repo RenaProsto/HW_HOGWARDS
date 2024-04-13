@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public abstract class Hogwards {
     private String studentsName;
     private int powerOfMagic;
@@ -8,31 +10,15 @@ public abstract class Hogwards {
         this.powerOfMagic = powerOfMagic;
         this.transgressionDistance = transgressionDistance;
     }
-
     public String getStudentsName() {
         return studentsName;
     }
-
-    public void setStudentsName(String studentsName) {
-        this.studentsName = studentsName;
-    }
-
     public int getPowerOfMagic() {
         return powerOfMagic;
     }
-
-    public void setPowerOfMagic(int powerOfMagic) {
-        this.powerOfMagic = powerOfMagic;
-    }
-
     public int getTransgressionDistance() {
         return transgressionDistance;
     }
-
-    public void setTransgressionDistance(int transgressionDistance) {
-        this.transgressionDistance = transgressionDistance;
-    }
-
     @Override
     public String toString() {
         return  "Имя - " + studentsName + ',' +
@@ -40,17 +26,27 @@ public abstract class Hogwards {
                 " Расстояние трансгрессии - " + transgressionDistance + ',';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Hogwards hogwards = (Hogwards) o;
+        return powerOfMagic == hogwards.powerOfMagic && transgressionDistance == hogwards.transgressionDistance && Objects.equals(studentsName, hogwards.studentsName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(studentsName, powerOfMagic, transgressionDistance);
+    }
+
     public abstract int checkingSpecificSkills(Hogwards hogwards);
 
     public int checkingGeneralSkills() {
         return powerOfMagic + transgressionDistance;
-
     }
-
     public void print() {
         System.out.println(this);
     }
-
     public void checkingStudentsOfAllFaculties(Hogwards hogwards) {
         int powerFirstStudent = checkingGeneralSkills();
         int powerSecondStudent = hogwards.checkingGeneralSkills();
@@ -62,9 +58,7 @@ public abstract class Hogwards {
             System.out.println("Студенты равны по силе");
         }
     }
-
-
-    public void checkingStudentsOfTheSameFaculty(Hogwards hogwards){
+    protected void check(Hogwards hogwards){
         int powerFirstStudent = checkingSpecificSkills(hogwards);
         int powerSecondStudent = hogwards.checkingSpecificSkills(hogwards);
         if (powerFirstStudent > powerSecondStudent){
@@ -76,5 +70,4 @@ public abstract class Hogwards {
             System.out.println("Студенты равны в знанях");
         }
     }
-
 }

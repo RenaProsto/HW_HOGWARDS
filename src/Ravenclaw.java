@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Ravenclaw extends Hogwards {
 
     private int intelligence;
@@ -17,6 +19,7 @@ public class Ravenclaw extends Hogwards {
         return intelligence+wisdom+wit+creativity;
     }
 
+
     @Override
     public String toString() {
         return " Когтевран: " + super.toString() +
@@ -25,35 +28,37 @@ public class Ravenclaw extends Hogwards {
                 " Остроумие - " + wit +
                 " Творчество - " + creativity;
     }
-    public int getIntelligence() {
-        return intelligence;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Ravenclaw ravenclaw = (Ravenclaw) o;
+        return intelligence == ravenclaw.intelligence && wisdom == ravenclaw.wisdom && wit == ravenclaw.wit && creativity == ravenclaw.creativity;
     }
 
-    public void setIntelligence(int intelligence) {
-        this.intelligence = intelligence;
+    @Override
+    public int hashCode() {
+        return Objects.hash(intelligence, wisdom, wit, creativity);
+    }
+
+    public int getIntelligence() {
+        return intelligence;
     }
 
     public int getWisdom() {
         return wisdom;
     }
 
-    public void setWisdom(int wisdom) {
-        this.wisdom = wisdom;
-    }
-
     public int getWit() {
         return wit;
-    }
-
-    public void setWit(int wit) {
-        this.wit = wit;
     }
 
     public int getCreativity() {
         return creativity;
     }
 
-    public void setCreativity(int creativity) {
-        this.creativity = creativity;
+    public void checkingStudentsOfTheSameFaculty(Ravenclaw ravenclaw) {
+        check(ravenclaw);
     }
 }

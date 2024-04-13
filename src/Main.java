@@ -2,8 +2,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Griffindor harryPotter = new Griffindor("Гарри Поттер", 10, 20, 18, 23, 15);
-        Griffindor hermionaGreinger = new Griffindor("Гермиона Грейнджер", 12, 25, 15, 25, 9);
+        Griffindor harryPotter = new Griffindor("Гарри Поттер", 10, 20, 18, 23, 25);
+        Griffindor hermionaGreinger = new Griffindor("Гермиона Грейнджер", 12, 25, 15, 25, 19);
         Griffindor ronWisli = new Griffindor("Рон Уизли", 5, 10, 16, 22, 16);
 
         Slytherin dracoMalfoy = new Slytherin("Драко Малфой", 8, 5, 8, 6, 10, 8, 20);
@@ -20,11 +20,8 @@ public class Main {
 
         gregoryGoyl.print();
 
-        harryPotter.checkingStudentsOfTheSameFaculty(ronWisli);
+        cedricDiggory.checkingStudentsOfAllFaculties(ronWisli);
 
-        cedricDiggory.checkingStudentsOfAllFaculties(dracoMalfoy);
-
-
-
+        padmaPatil.checkingStudentsOfTheSameFaculty(choChang);
     }
 }

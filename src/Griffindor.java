@@ -12,39 +12,22 @@ public class Griffindor extends Hogwards {
         this.honor = honor;
         this.bravery = bravery;
     }
-
     public int getNobility() {
         return nobility;
     }
-
-    public void setNobility(int nobility) {
-        this.nobility = nobility;
-    }
-
     public int getHonor() {
         return honor;
     }
-
-    public void setHonor(int honor) {
-        this.honor = honor;
-    }
-
     public int getBravery() {
         return bravery;
     }
-
-    public void setBravery(int bravery) {
-        this.bravery = bravery;
-    }
-
     @Override
     public String toString() {
-        return  "Гриффиндор: " + super.toString() +
+        return "Гриффиндор: " + super.toString() +
                 " Благородство - " + nobility + ',' +
                 " Честь - " + honor + ',' +
                 " Храбрость - " + bravery + '.';
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -52,7 +35,6 @@ public class Griffindor extends Hogwards {
         Griffindor that = (Griffindor) o;
         return nobility == that.nobility && honor == that.honor && bravery == that.bravery;
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(nobility, honor, bravery);
@@ -62,9 +44,11 @@ public class Griffindor extends Hogwards {
     public int checkingSpecificSkills(Hogwards hogwards) {
         return this.nobility + this.honor + this.bravery;
     }
-
     @Override
     public int checkingGeneralSkills() {
         return super.checkingGeneralSkills();
+    }
+    public void checkingStudentsOfTheSameFaculty(Griffindor griffindor) {
+        check(griffindor);
     }
 }

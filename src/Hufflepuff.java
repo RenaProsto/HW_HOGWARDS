@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Hufflepuff extends Hogwards {
 
     private int diligence;
@@ -14,6 +16,7 @@ public class Hufflepuff extends Hogwards {
     public int checkingSpecificSkills(Hogwards hogwards) {
         return diligence+loyalty+honesty;
     }
+
     @Override
     public String toString() {
         return " Пуффендуй: " + super.toString() +
@@ -21,27 +24,34 @@ public class Hufflepuff extends Hogwards {
                 " Верность - " + loyalty +
                 " Честность - " + honesty;
     }
-    public int getDiligence() {
-        return diligence;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Hufflepuff that = (Hufflepuff) o;
+        return diligence == that.diligence && loyalty == that.loyalty && honesty == that.honesty;
     }
 
-    public void setDiligence(int diligence) {
-        this.diligence = diligence;
+    @Override
+    public int hashCode() {
+        return Objects.hash(diligence, loyalty, honesty);
+    }
+
+    public int getDiligence() {
+        return diligence;
     }
 
     public int getLoyalty() {
         return loyalty;
     }
 
-    public void setLoyalty(int loyalty) {
-        this.loyalty = loyalty;
-    }
 
     public int getHonesty() {
         return honesty;
     }
 
-    public void setHonesty(int honesty) {
-        this.honesty = honesty;
+    public void checkingStudentsOfTheSameFaculty(Hufflepuff hufflepuff) {
+        check(hufflepuff);
     }
 }
