@@ -4,19 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8da7e228-2775-4caf-ba17-183b35704290" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HOGWARDS.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="8da7e228-2775-4caf-ba17-183b35704290" name="Changes" comment="второй коммит">
+      <change afterPath="$PROJECT_DIR$/src/Griffindor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Hogwards.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Hufflepuff.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ravenclaw.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Slytherin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -74,6 +80,36 @@
       <option name="presentableId" value="Default" />
       <updated>1713031537357</updated>
     </task>
+    <task id="LOCAL-00001" summary="первый коммит">
+      <option name="closed" value="true" />
+      <created>1713032148290</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713032148290</updated>
+    </task>
+    <task id="LOCAL-00002" summary="первый коммит">
+      <option name="closed" value="true" />
+      <created>1713032254442</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713032254442</updated>
+    </task>
+    <task id="LOCAL-00003" summary="второй коммит">
+      <option name="closed" value="true" />
+      <created>1713032554396</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713032554396</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="первый коммит" />
+    <MESSAGE value="второй коммит" />
+    <option name="LAST_COMMIT_MESSAGE" value="второй коммит" />
   </component>
 </project>
